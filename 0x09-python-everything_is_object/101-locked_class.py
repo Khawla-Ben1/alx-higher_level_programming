@@ -15,8 +15,6 @@ class LockedClass:
             raise AttributeError("'LockedClass' object has no attribute '" + attribute + "'")
 
 
-#or
-#!/usr/bin/python3
 """
     101-locked_class: class LockedClass
 """
