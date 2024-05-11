@@ -1,8 +1,2 @@
 #!/bin/bash
-pyfile=$PYFILE
-pyfilec="${pyfile%.*}.pyc"
-echo "Compiling $pyfile ..."
-python -m py_compile "$pyfile"
-mv "${pyfile}c" "$pyfilec"
-length=$(od -t x1 "$pyfilec" | zgrep -c "Best School")
-echo "$length"
+python3 -m compileall -b $PYFILE i
