@@ -1,0 +1,10 @@
+#!/bin/bash
+
+pyfile=$PYFILE
+pyfilec="${pyfile}c"
+
+echo "Compiling $pyfile ..."
+python3 -m py_compile "$pyfile"
+
+echo "Renaming compiled file to $pyfilec ..."
+mv "${pyfile}c" "$pyfilec"
