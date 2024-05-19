@@ -2,7 +2,7 @@
 import math
 """
 Module 103-magic_class
-Class MagicClass that does exactly the same as the following Python bytecode
+Defines a class MagicClass that does exactly the same as the following Python bytecode
 """
 
 
