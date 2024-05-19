@@ -20,17 +20,16 @@ class MagicClass:
         area(): Calculates the area of the circle.
     """
 
-    def __init__(self, radius):
+    def __init__(self, radius=1.0):
         """
         Initializes a new instance of the MagicClass.
 
         Args:
-            radius (int or float): The radius of the circle.
+            radius (int or float, optional): The radius of the circle. Defaults to 1.0.
 
         Raises:
             TypeError: If `radius` is not a number (integer or float).
         """
-        self.__radius = 0
         if not isinstance(radius, (int, float)):
             raise TypeError("radius must be a number")
         self.__radius = radius
@@ -40,7 +39,7 @@ class MagicClass:
         Calculates the area of the circle.
 
         Returns:
-            The area of the circle.
+            float: The area of the circle.
         """
         return self.__radius ** 2 * math.pi
 
@@ -49,6 +48,6 @@ class MagicClass:
         Calculates the circumference of the circle.
 
         Returns:
-            The circumference of the circle.
+            float: The circumference of the circle.
         """
         return 2 * math.pi * self.__radius
