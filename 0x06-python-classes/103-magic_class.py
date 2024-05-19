@@ -1,9 +1,20 @@
 #!/usr/bin/python3
 import math
+"""
+Module 103-magic_class
+Class MagicClass that does exactly the same as the following Python bytecode
+"""
+
 
 class MagicClass:
     """
-    A class that defines a circle based on the provided Python bytecode.
+    A class that represents a circle.
+
+    Attributes:
+        __radius (float): The radius of the circle.
+
+    Methods:
+        area(): Calculates the area of the circle.
     """
 
     def __init__(self, radius):

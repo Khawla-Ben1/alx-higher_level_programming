@@ -69,7 +69,8 @@ class Square:
             other (Square): The other square to compare.
 
         Returns:
-            True if the current square is equal to the other square, False otherwise.
+            True if the current square is equal
+            to the other square, False otherwise.
         """
         return self.area() == other.area()
 
@@ -81,7 +82,8 @@ class Square:
             other (Square): The other square to compare.
 
         Returns:
-            True if the current square is not equal to the other square, False otherwise.
+            True if the current square is not
+            equal to the other square, False otherwise.
         """
         return self.area() != other.area()
 
@@ -93,19 +95,22 @@ class Square:
             other (Square): The other square to compare.
 
         Returns:
-            True if the current square is greater than the other square, False otherwise.
+            True if the current square is greater
+            than the other square, False otherwise.
         """
         return self.area() > other.area()
 
     def __ge__(self, other):
         """
-        Checks if the current square is greater than or equal to another square.
+        Checks if the current square is
+        greater than or equal to another square.
 
         Args:
             other (Square): The other square to compare.
 
         Returns:
-            True if the current square is greater than or equal to the other square, False otherwise.
+            True if the current square is greater
+            than or equal to the other square, False otherwise.
         """
         return self.area() >= other.area()
 
@@ -117,7 +122,8 @@ class Square:
             other (Square): The other square to compare.
 
         Returns:
-            True if the current square is less than the other square, False otherwise.
+            True if the current square is less than
+            the other square, False otherwise.
         """
         return self.area() < other.area()
 
@@ -129,6 +135,7 @@ class Square:
             other (Square): The other square to compare.
 
         Returns:
-            True if the current square is less than or equal to the other square, False otherwise.
+            True if the current square is
+            less than or equal to the other square, False otherwise.
         """
         return self.area() <= other.area()
