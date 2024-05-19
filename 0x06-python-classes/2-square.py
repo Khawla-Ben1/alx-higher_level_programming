@@ -4,6 +4,7 @@ Module 2-square
 Defines a square class with a private instance attribute and input validation.
 """
 
+
 class Square:
     """
     Defines a square.

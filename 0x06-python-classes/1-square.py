@@ -4,6 +4,7 @@ Module 1-square
 Defines a square class with a private instance attribute.
 """
 
+
 class Square:
     """
     Defines a square.
