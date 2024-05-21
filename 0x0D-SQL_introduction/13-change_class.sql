@@ -1,3 +1,3 @@
--- change_class
+-- change class
 DELETE FROM second_table
 WHERE score <= 5;
