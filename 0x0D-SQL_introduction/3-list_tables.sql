@@ -1,3 +1,3 @@
---list_tables
+--  list tables
 USE dbname;
 SHOW TABLES;

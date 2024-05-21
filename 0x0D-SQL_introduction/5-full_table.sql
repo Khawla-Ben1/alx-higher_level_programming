@@ -1,2 +1,2 @@
---full_table
+--  full table
 SHOW CREATE TABLE first_table;
