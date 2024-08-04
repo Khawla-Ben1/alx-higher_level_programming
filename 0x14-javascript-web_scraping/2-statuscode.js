@@ -8,4 +8,4 @@ re.get(url, (error, response) => {
     return;
   }
   console.log(`code: ${response.statusCode}`);
-  });
+});
