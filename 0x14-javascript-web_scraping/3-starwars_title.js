@@ -5,5 +5,4 @@ const url = `https://swapi-api.alx-tools.com/api/films/${id}/`;
 
 re.get(url, { json: true }, (error, response, body) => {
   console.log(body.title);
-  console.error(`Error: Received status code ${response.statusCode}`);
 });
