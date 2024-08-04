@@ -9,10 +9,8 @@ request.get(process.argv[2], (error, response, body) => {
     return;
   }
   fs.writeFile(filePath, body, 'utf8', (err) => {
-      // if (err) {
-      //   console.error('Error writing file:', err);
-      // } else {
-      //   console.log('File saved successfully');
-      // }
+      if (err) {
+        console.error('Error writing file:', err);
+      }
     });
 });
