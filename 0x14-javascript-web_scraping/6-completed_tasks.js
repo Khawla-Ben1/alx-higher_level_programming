@@ -1,5 +1,6 @@
 #!/usr/bin/node
 const request = require('request');
+const userTasksCount = {};
 
 request(process.argv[2], { json: true }, (error, response, body) => {
   if (error) {
