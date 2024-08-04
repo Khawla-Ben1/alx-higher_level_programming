@@ -9,7 +9,8 @@ re.get(url, { json: true }, (error, response, body) => {
     return;
   }
   const movies = body.results;
-  const count = movies.filter(movie =>
-    movie.characters.some(character => character.endsWith(`/${wedgeAntillesId}/`))
-  ).length;
+  const count = movies.reduce((count, movie) => {
+    return movie.characters.some(character => character.endsWith('/18/')) ? count + 1 : count;
+  }, 0);
+  console.log(count);
 });
