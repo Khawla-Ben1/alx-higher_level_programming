@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const re = require('request');
+const request = require('request');
 let count = 0;
 
 request.get(process.argv[2], (error, response, body) => {
