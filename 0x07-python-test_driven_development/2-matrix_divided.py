@@ -5,9 +5,11 @@
 def matrix_divided(matrix, div):
     """
     Divides all elements of a matrix by a given number.
+
     Args:
         matrix: list of lists of integers or floats.
         div: number (integer or float) used for division.
+
     Returns:
         new matrix with divided values, rounded to 2 decimal places.
     """
@@ -23,10 +25,11 @@ def matrix_divided(matrix, div):
         for element in row:
             if not isinstance(element, (int, float)):
                 raise TypeError(
-                    "matrix must be a matrix of integers/floats"
+                    "matrix must be a matrix (list of lists) of integers/floats"
                 )
     if len(set(len(row) for row in matrix)) != 1:
         raise TypeError("Each row of the matrix must have the same size")
+
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
