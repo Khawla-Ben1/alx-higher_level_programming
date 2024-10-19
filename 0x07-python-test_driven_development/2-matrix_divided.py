@@ -4,33 +4,27 @@
 
 def matrix_divided(matrix, div):
     """
-    Args: Divides all element of a matrix.
-        :param matrix: must be a list of lists of integers or floats.
-        :param div: a number (integer or float), can't be equal to 0,
-                    used in dividing all elements of the matrix,
-                    rounded to 2 decimal places.
-    Returns: new matrix.
+    Divides all elements of a matrix by a given number.
+
+    Args:
+        matrix: list of lists of integers or floats.
+        div: number (integer or float) used for division.
+
+    Returns:
+        new matrix with divided values, rounded to 2 decimal places.
     """
-    import decimal
-    error_msg = "matrix must be a matrix (list of lists) of integers/floats"
-    if type(matrix) is not list:
-        raise TypeError(error_msg)
-    len_rows = []
-    row_count = 0
+    if not isinstance(matrix, list) or not matrix:
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     for row in matrix:
-        if type(row) is not list:
-            raise TypeError(error_msg)
-        len_rows.append(len(row))
+        if not isinstance(row, list) or not row:
+            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
         for element in row:
-            if type(element) not in [int, float]:
-                raise TypeError(error_msg)
-        row_count += 1
-    if len(set(len_rows)) > 1:
+            if not isinstance(element, (int, float)):
+                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    if len(set(len(row) for row in matrix)) != 1:
         raise TypeError("Each row of the matrix must have the same size")
-    if type(div) not in [int, float]:
+    if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
-    if int(div) == 0:
+    if div == 0:
         raise ZeroDivisionError("division by zero")
-    new_matrix = list(map(lambda row:
-                          list(map(lambda x: round(x/div, 2), row)), matrix))
-    return new_matrix
+    return [[round(element / div, 2) for element in row] for row in matrix]
