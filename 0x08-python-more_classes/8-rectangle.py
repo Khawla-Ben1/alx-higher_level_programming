@@ -3,6 +3,7 @@
 Define a Rectangle
 """
 
+
 class Rectangle:
     """Rectangle class"""
     number_of_instances = 0
@@ -23,7 +24,11 @@ class Rectangle:
 
     def __repr__(self):
         """Return representation of the Rectangle"""
-        return "{:s}({:d}, {:d})".format(type(self).__name__, self.width, self.height)
+        return "{:s}({:d}, {:d})".format(
+            type(self).__name__,
+            self.width,
+            self.height
+            )
 
     def __del__(self):
         """Delete the Rectangle, decrease instance count"""

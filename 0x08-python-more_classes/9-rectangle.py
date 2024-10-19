@@ -24,7 +24,11 @@ class Rectangle:
 
     def __repr__(self):
         """returns representation of the Rectangle"""
-        return "{:s}({:d}, {:d})".format(type(self).__name__, self.width, self.height)
+        return "{:s}({:d}, {:d})".format(
+            type(self).__name__,
+            self.width,
+            self.height
+            )
 
     def __del__(self):
         """kill the Rectangle, decrease instance count"""
